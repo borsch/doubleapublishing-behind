@@ -62,5 +62,5 @@ var changeImage = function(e) {
   }
 };
 
-setInterval(changeImage, 15000);
+/*setInterval(changeImage, 15000);*/
 $('.main__img').on('click', changeImage)
