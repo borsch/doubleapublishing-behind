@@ -1,0 +1,105 @@
+input, textarea {
+    background: transparent;
+    border: 1px solid rgba($white, .5);
+    border-radius: 0.3125rem;
+    padding: 0.875rem 1.25rem;
+    box-shadow: none;
+    color: $white;
+    width: 100%;
+    margin-bottom: 0.75rem;
+
+    &:focus {
+        outline: none;
+        border-color: $white;
+    }
+    ::-webkit-input-placeholder,
+    ::-moz-placeholder,
+    :-moz-placeholder,
+    :-ms-input-placeholder {
+        color: rgba($white, .5);
+    }
+}
+textarea {
+    resize: vertical;
+}
+
+.button {
+    @include button
+}
+
+.section-preload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: $white;*/
+    opacity: .3;
+    z-index: -1;
+}
+.section-preload__title {
+    @include font(9rem, "Raleway", $primary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablets {
+        font-size: 6rem;
+    }
+}
+.section__wrap {
+    min-height: 100vh;
+    background: $white;
+}
+.section__content {
+    padding-top: 7%;
+    padding-bottom: 3.75rem;
+    position: relative;
+    z-index: 2;
+}
+
+.section__menu-item {
+    @include font(0.875rem, "Raleway", $primary-color);
+    text-transform: uppercase;
+}
+.section__title {
+    @include font(1.875rem, "Raleway", $primary-color);
+    font-weight: 500;
+    margin-bottom: 1.875rem;
+}
+
+.section__inner-block {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets {
+        flex-wrap: wrap;
+    }
+}
+
+/* Preloader */
+#hellopreloader>p {
+    display:none;
+  }
+#hellopreloader_preload {
+display: block;
+position: fixed;
+z-index: 99999;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: $dark url("./assets/images/preload.svg") center center no-repeat;
+background-size:80px;
+}
+
+.features,
+.conditions,
+.price {
+    .section__wrap {
+        animation-delay: 1.5s;
+    }
+}

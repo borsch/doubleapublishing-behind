@@ -1,0 +1,55 @@
+// Media
+@mixin desktops {
+	@media screen and (max-width: $desktops) {
+		@content;
+	}
+}
+
+@mixin laptops {
+	@media screen and (max-width: $laptops) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+@mixin font($size, $family, $color) {
+	font-size: $size;
+	font-family: $family, 'Roboto', Helvetica, sans-serif;
+	font-weight: normal;
+	color: $color;
+}
+
+@mixin button($color1: $primary-color, $color2: $white) {
+	background: $color1;
+    border: 1px solid $color1;
+    color: $color2;
+    padding: 0.75rem 1.875rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: rem(40px);
+    transition: .3s;
+    margin-top: 1.5625rem;
+    margin-bottom: 0.9375rem;
+    cursor: pointer;
+
+    &:hover {
+        background: transparent;
+        color: $color1;
+    }
+
+}

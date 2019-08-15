@@ -1,0 +1,121 @@
+.price {
+    .section__wrap {
+        background: $white;
+    }
+    @include laptops {
+        .section__inner-block {
+            flex-wrap: wrap;
+        }
+    }
+}
+.price__item {
+    width: 30%;
+    min-width: 30%;
+    text-align: center;
+    transform-origin: 50%;
+    transition: .1s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    @include laptops {
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+
+    @include tablets {
+        width: 100%;
+        max-width: 28.125rem;
+        margin: 0 auto 2rem;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    &--order {
+        .tarif__desc {
+            transform: scaleX(0);
+            width: 0;
+            opacity: 0;
+        }
+        .tarif__order-form {
+            transform: scaleX(1);
+            width: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+.tarif__desc, .tarif__order-form {
+    background: $light-gray;
+    border-radius: 0.3125rem;
+    padding: 1.875rem 1.875rem 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    transition: .3s;
+    transform: scaleX(1);
+    transform-origin: 50%;
+}
+
+.tarif__order-form {
+    background: $secondary-color;
+    color: $white;
+    transform: scaleX(0);
+    width: 0;
+    opacity: 0;
+    margin-left: -100%;
+    a {
+        color: $white;
+    }
+    .button {
+        border: 1px solid $white;
+        background-color: $secondary-color;
+        &:hover {
+            color: $secondary-color;
+            background-color: $white;
+        }
+    }
+}
+.close-btn {
+    position: absolute;
+    top: rem(10px);
+    right: rem(20px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        opacity: .5;
+    }
+}
+
+.tarif__list {
+    text-align: left;
+}
+.tarif__item {
+    margin-bottom: 0.9375rem;
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 0.3125rem;
+        height: 0.3125rem;
+        border-radius: 50%;
+        background: $secondary-color;
+        margin-right: 0.9375rem;
+    }
+}
+.tarif__title {
+    font-size: 1.3125rem;
+    font-weight: 500;
+    margin-bottom: 1.5625rem;
+}
+.tarif__order {
+    margin-top: auto;
+}
+.tarif__cost {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $primary-color;
+}

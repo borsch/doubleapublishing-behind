@@ -1,0 +1,83 @@
+body, html {
+  height: 100%;
+  font-size: 16px;
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+body {
+  @include font(1rem, 'Raleway', $dark);
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {
+  outline: none;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  /*max-width: 1240px;*/
+
+  @include laptops {
+    padding-left: 1.25rem;
+  }
+  @include phones {
+    padding-left: 1.875rem; 
+  }
+}
+
+section {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 0.9375rem 0;
+  padding: 0;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

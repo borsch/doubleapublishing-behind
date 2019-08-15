@@ -1,0 +1,49 @@
+.conditions {
+    .section__wrap {
+        background: $beige;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url('./assets/images/bg/cloud.png') repeat-x 0 center/cover;
+            animation: animatedBackground 60s linear infinite;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 90%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: url('./assets/images/condition_img.png') no-repeat bottom center/contain;
+
+            @include tablets {
+                filter: opacity(.3);
+            }
+        }
+    }
+
+    .left-block, .right-block {
+        width: 30%;
+        margin-bottom: 3.75rem;
+
+        @include tablets {
+            width: 100%;
+        }
+    }
+    .right-block {
+        align-self: flex-end;
+        margin-top: 3.75rem;
+        margin-bottom: 0;
+
+        @include tablets {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.feedback {
+    background: url("./assets/images/bg/feedback_bg.jpg") no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .section__title {
+        color: $white;
+        text-transform: uppercase;
+    }
+}
+
+.feedback__form {
+    margin: 3.4375rem auto 0;
+    width: 60%;
+    min-width: 18.75rem;
+    margin-bottom: 1.875rem;
+
+    @include tablets {
+        min-width: initial;
+        width: 100%;
+    }
+    .button {
+        @include button($secondary-color);
+        width: 60%;
+        min-width: 18.75rem;
+        max-width: 22.5rem;
+
+        @include tablets {
+            width: 100%;
+            min-width: initial;
+        }
+    }
+
+    .form__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.9375rem;
+
+        input {
+            width: 49%;
+        }
+    }
+}
+
+.copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1.25rem 0;
+    background: $black;
+    font-size: 0.875rem;
+
+    a {
+        color: $white;
+    }
+}

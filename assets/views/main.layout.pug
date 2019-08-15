@@ -1,0 +1,49 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    
+    title Behind
+    link(rel='stylesheet' href='main.min.css')
+  body
+    .wrapper
+      .maincontent
+        block content
+
+    .fixed-menu
+      a(href="#hero").logo__link
+        +icon('logo', 'menu-logo')
+      nav.page-nav
+        .nav__item.active
+          a(href="#features")
+            .nav__prompt Про Behind
+        .nav__item
+          a(href="#conditions")
+            .nav__prompt Для замовника
+        //.nav__item
+          a(href="#price")
+            .nav__prompt Вартість
+        .nav__item
+          a(href="#feedback")
+            .nav__prompt Зворотній зв'язок
+      //.bottom-nav
+        a(href="#")
+          +icon("arrow-menu", "arrow-menu")
+        .bottom-nav__item Для заказчика
+    // Preloader
+    #hellopreloader
+      #hellopreloader_preload
+
+    script(src='./assets/scripts/jquery-3.3.1.min.js')
+    script(src='./assets/scripts/jquery.touchSwipe.min.js')
+    script(src='./assets/scripts/mobile-detect.min.js')
+    script(src='./assets/scripts/preload.js')
+    script(src='./assets/scripts/wow.min.js')
+    script(src='./assets/scripts/main.js')
+    
+    block scripts

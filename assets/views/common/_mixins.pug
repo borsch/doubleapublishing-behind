@@ -1,0 +1,20 @@
+mixin icon(iconName, iconClass)
+  svg(class=`${iconClass}`)
+    use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
+
+mixin image(imagePath, imageAlt, imageClass)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin features(featureName, featureDesc)
+  .feature__item(data-wow-offset="40").wow.slideInRight
+    .feature__icon
+      +image(featureName + '.svg', "", featureName + '-icon')
+    .feature__desc #{featureDesc}
+
+mixin preload(itemSection)
+  .section-preload(data-wow-offset="40").wow.fadeIn
+    .section-preload__title #{itemSection}
+
+mixin sectionHeader(itemMenu, title)
+  .section__menu-item #{itemMenu}
+  h2.section__title #{title}

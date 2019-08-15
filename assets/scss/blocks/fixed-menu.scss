@@ -1,0 +1,105 @@
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2.8125rem;
+    height: 89%;
+    background: rgba($gray, .5);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.9375rem 0.4375rem;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.logo__link {
+    position: absolute;
+    top: rem(15px);
+    margin-bottom: rem(30px);
+}
+.menu-logo {
+    width: 1.875rem;
+    height: 2.3125rem;
+    fill: $dark;
+}
+
+.nav__item {
+    height: 1.875rem;
+    margin-bottom: 0.625rem;
+    width: 1.875rem;
+
+    a {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 0.1875rem;
+            background: $neutral;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &.active {
+        a:before {
+            background: $secondary-color;
+        }
+        .nav__prompt {
+            background: $secondary-color;
+        }
+    }
+
+    &:hover {
+        .nav__prompt {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+    }
+}
+
+.nav__prompt {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    color: $white;
+    background: $neutral;
+    opacity: 0;
+    padding: 0.333rem;
+    padding-right: 0.625rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    height: 1.875rem;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .3s;
+}
+.bottom-nav {
+    transform-origin: 0 0;
+    margin-left: auto;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+.arrow-menu {
+    height: 0.625rem;
+    width: 1.094rem;
+    fill: $neutral;
+    margin-right: 0.875rem;
+    transition: .3s;
+    &:hover {
+        fill: $dark;
+    }
+}
