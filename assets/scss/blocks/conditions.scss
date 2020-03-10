@@ -20,7 +20,7 @@
             height: 90%;
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: 30%;
             background: url('./assets/images/condition_img.png') no-repeat bottom center/contain;
 
             @include tablets {
@@ -29,21 +29,36 @@
         }
     }
 
-    .left-block, .right-block {
-        width: 30%;
-        margin-bottom: 3.75rem;
+    .section__inner-block {
+        justify-content: flex-start;
+    }
 
+    .left-block {
+        width: 70%;
+        margin-bottom: 3.75rem;
+        column-count: 2;
+
+        @include laptops {
+            column-count: 1;
+        }
         @include tablets {
             width: 100%;
         }
     }
-    .right-block {
-        align-self: flex-end;
-        margin-top: 3.75rem;
-        margin-bottom: 0;
 
-        @include tablets {
-            margin-top: 0;
+    ul {
+        list-style: disc;
+        margin-left: rem(18px);
+        margin-right: 10%;
+
+        li {
+            margin-bottom: rem(10px);
         }
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: rem(21px);
+        margin-bottom: rem(15px);
     }
 }

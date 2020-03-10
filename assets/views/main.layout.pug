@@ -10,6 +10,9 @@ html(lang="ru")
     
     title Behind
     link(rel='stylesheet' href='main.min.css')
+    link(rel='stylesheet' href='./assets/scripts/slick-slider/slick.css')
+    link(rel='stylesheet' href='./assets/scripts/slick-slider/slick-theme.css')
+    link(rel="shortcut icon" type="image/png" href="./assets/images/behind-logo.png")
   body
     .wrapper
       .maincontent
@@ -17,7 +20,7 @@ html(lang="ru")
 
     .fixed-menu
       a(href="#hero").logo__link
-        +icon('logo', 'menu-logo')
+        +image('behind-logo.png', 'Home', 'menu-logo')
       nav.page-nav
         .nav__item.active
           a(href="#features")
@@ -44,6 +47,7 @@ html(lang="ru")
     script(src='./assets/scripts/mobile-detect.min.js')
     script(src='./assets/scripts/preload.js')
     script(src='./assets/scripts/wow.min.js')
+    script(src='./assets/scripts/slick-slider/slick.min.js')
     script(src='./assets/scripts/main.js')
     
     block scripts

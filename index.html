@@ -6,6 +6,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Behind</title>
     <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="./assets/scripts/slick-slider/slick.css">
+    <link rel="stylesheet" href="./assets/scripts/slick-slider/slick-theme.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/behind-logo.png">
   </head>
   <body>
     <div class="wrapper">
@@ -15,10 +18,7 @@
           <div class="hero__bg hero__bg_2"></div>
           <div class="hero__bg hero__bg_3"></div>
           <div class="container hero__content">
-            <div class="hero__desc">
-              <svg class="logo-icon">
-                <use xlink:href="./assets/images/icons/sprite.svg#logo"></use>
-              </svg>
+            <div class="hero__desc"><img class="logo-icon" src="./assets/images/behind-logo.png" alt="Behind"/>
               <h1 class="site-title">ЗАЗИРНИ ЗА ЛАШТУНКИ</h1>
               <h2 class="site-subtitle">За допомогою телефону ти можеш побачити більше, ніж просто картинку. Дізнайся, що за нею приховано</h2>
             </div>
@@ -38,14 +38,26 @@
               <h2 class="section__title">Як же це працює</h2>
               <div class="section__inner-block">
                 <div class="left-block wow slideInLeft" data-wow-offset="40">
-                  <video src="https://www.dropbox.com/s/sja8t5ddn207p7b/MANUAL%20QR%20book.mp4?dl=1" controls></video>
+                  <ul class="screen-slider">
+                    <li class="screen__item"><img class="screen" src="./assets/images//screens/slide1.png" alt="Наведи телефон на картинку"/>
+                    </li>
+                    <li class="screen__item"><img class="screen" src="./assets/images//screens/slide2.png" alt="Намагайся вмістити картинку в рамку"/>
+                    </li>
+                    <li class="screen__item"><img class="screen" src="./assets/images//screens/slide3.png" alt="Повертайте телефон"/>
+                    </li>
+                    <li class="screen__item"><img class="screen" src="./assets/images//screens/slide4.png" alt="Лінк"/>
+                    </li>
+                    <li class="screen__item"><img class="screen" src="./assets/images//screens/slide5.png" alt="Зробіть СВОЮ власну картинку живою"/>
+                    </li>
+                  </ul>
+                  <!--video(src="https://www.dropbox.com/s/sja8t5ddn207p7b/MANUAL%20QR%20book.mp4?dl=1" controls)-->
                 </div>
                 <div class="right-block">
                   <div class="features__list">
                     <div class="feature__item wow slideInRight" data-wow-offset="40">
                       <div class="feature__icon"><img class="picture-icon" src="./assets/images/picture.svg" alt=""/>
                       </div>
-                      <div class="feature__desc">Завантажте доданок Behind з AppStore або PlayMarket</div>
+                      <div class="feature__desc">Завантажте доданок Behind з PlayMarket</div>
                     </div>
                     <div class="feature__item wow slideInRight" data-wow-offset="40">
                       <div class="feature__icon"><img class="mobile-app-icon" src="./assets/images/mobile-app.svg" alt=""/>
@@ -62,13 +74,12 @@
               </div>
             </div>
             <div class="features__bottom-block wow slideInUp" data-wow-offset="40">
-              <div class="container"><a class="app__link" href="">
-                  <svg class="app__icon">
-                    <use xlink:href="./assets/images/icons/sprite.svg#google-play"></use>
-                  </svg></a><a class="app__link" href="">
-                  <svg class="app__icon">
-                    <use xlink:href="./assets/images/icons/sprite.svg#app-store"></use>
-                  </svg></a></div>
+              <div class="container"><a class="app__link" href=""><img class="app__icon google-play" src="./assets/images/app-store-btn-sprite.png" alt="Google Play"/></a>
+                <!--a(href="").app__link
+                +image('app-store-btn-sprite.png', 'App Store', 'app__icon app-store')
+                
+                -->
+              </div>
             </div>
           </div>
         </section>
@@ -82,23 +93,21 @@
               <h2 class="section__title">Що потрібно, щоб ваша картинка ожила</h2>
               <div class="section__inner-block">
                 <div class="left-block wow slideInLeft" data-wow-offset="40">
-                  <p><strong>Насправді, зовсім небагато:</strong></p>
+                  <h3>Насправді, зовсім небагато:</h3>
                   <ul>
-                    <li>Потрібен файл з картинкою, яка буде оживати. Можна відсканувати, сфотографувати і т.ін.</li>
-                    <li>Ще потрібен лінк на відео, яке буде відтворюватись на картинці.</li>
-                    <li>Наступний крок – обрати пакет, який вас цікавить, та надіслати заповнену заявку.</li>
-                    <li>На вашу адресу буде сформовано та надіслано запит на оплату. </li>
-                    <li>Протягом доби після сплати ваша картинка оживе.</li>
-                    <li>Але для того, щоб користувачі дізнались, що там ще щось є, ви маєте розмістити мітку Behind на картинці у видимому місці. Мітку можна скачати ТУТ.</li>
+                    <li>Потрібен файл з картинкою, яка буде оживати. Можна відсканувати, сфотографувати і т.п.</li>
+                    <li>Ще потрібен файл з відео, яке буде відтворюватись на картинці. Це може буте відео зняте на телефон або професійна зйомка.</li>
+                    <li>Звяжіться з нами використовуючи форму внизу сторінки. Поштою ви отримаєте подальшу інструкцію по наданню вашої картинки, відео та додаткової необхідної інформації.</li>
+                    <li>Після отримання необхідних даних, здебільшого протягом доби, ваша картинка оживе. </li>
+                    <li>Але для того, щоб користувачі дізнались, що за картинкою приховане відео, вкрай бажано розмістити мітку Behind на картинці у видимому місці. Мітку можна скачати <a href="/downloads/sticker-behind.jpg" download>ТУТ</a>.</li>
                     <li>Також ви можете замовити у нас наліпки, які можна клеїти на вже віддруковані зображення.</li>
+                    <li>Сервіс Behind для приватних осіб з некомерційною інформацією є безкоштовним. Є обмеження щодо контенту та термінів надання послуг. За детальною інформацією звертайтесь використовуючи форму зворотного звязку.</li>
+                    <li>Щодо умов використання сервісу в комерційних цілях, надішліть, будь ласка, запит і ми з вами зв`яжемось.</li>
                   </ul>
-                </div>
-                <div class="right-block wow slideInRight" data-wow-offset="40">
-                  <p><strong>На що варто звернути увагу:</strong></p>
+                  <h3>На що варто звернути увагу:</h3>
                   <ul>
                     <li>Картинку бажано знімати в умовах наближених до тих, де її будуть переглядати користувачі.</li>
                     <li>Не варто завантажувати довгі відео. Рекомендовано до 1 хв. Довше навряд будуть дивитись. Тому воно має буте коротке, але цікаве.</li>
-                    <li>Зйомку картинки та відео бажано робити портретно, але це необов’язково.</li>
                     <li>Є можливість приєднувати інший контент та додаткову інформацію. Якщо вас це цікавіть – зв’яжіться з нами. </li>
                     <li>Також ми можемо допомогти вам зі створенням професійного відео та іншого контенту. </li>
                   </ul>
@@ -188,24 +197,21 @@
           <div class="container section__content">
             <h2 class="section__title">Зв'яжіться з нами</h2>
             <div class="section__desc">Якщо Ви зацікавлені або у Вас виникли питання</div>
-            <div class="section__desc" id="responseMessage" style="display: none;">Ваше повідомлення прийнято</div>
-            <form class="feedback__form" id="feedbackForm">
+            <form class="feedback__form" action="">
+              <p>* Всі поля обов'язкові до заповнення</p>
               <div class="form__row">
-                <input type="text" name="name" placeholder="Ваше ім'я" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Ваш email" required>
               </div>
-              <textarea placeholder="Ваше повідомлення" name="text" required></textarea>
+              <textarea placeholder="Ваше повідомлення" required></textarea>
               <button class="button" type="submit">Надіслати</button>
             </form>
           </div>
-          <div class="copyright"><a href="/">DoubleAPublishing</a><span>&nbsp;&copy; 2019</span></div>
+          <div class="copyright"><a href="/">DoubleAPublishing</a><span>&nbsp;&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script></span></div>
         </section>
       </div>
     </div>
-    <div class="fixed-menu"><a class="logo__link" href="#hero">
-        <svg class="menu-logo">
-          <use xlink:href="./assets/images/icons/sprite.svg#logo"></use>
-        </svg></a>
+    <div class="fixed-menu"><a class="logo__link" href="#hero"><img class="menu-logo" src="./assets/images/behind-logo.png" alt="Home"/></a>
       <nav class="page-nav">
         <div class="nav__item active"><a href="#features">
             <div class="nav__prompt">Про Behind</div></a></div>
@@ -233,41 +239,8 @@
     <script src="./assets/scripts/mobile-detect.min.js"></script>
     <script src="./assets/scripts/preload.js"></script>
     <script src="./assets/scripts/wow.min.js"></script>
-    <script src="./assets/scripts/main.js"></script>
-    <script>
-      new WOW().init();
-
-      $(function() {
-        $('#feedbackForm').submit(function(e){
-          e.preventDefault();
-
-          var $form = $(this),
-              data = {
-                  name: $form.find('[name=name]').val(),
-                  email: $form.find('[name=email]').val(),
-                  text: $form.find('[name=text]').val(),
-              };
-
-          $.ajax({
-            url: 'https://api.doubleapublishing.com/api/behind-feedback',
-            type: 'POST',
-            data: JSON.stringify(data),
-            dataType: 'json',
-            beforeSend: function(xhr){
-              xhr.setRequestHeader('Accept', 'application/json');
-              xhr.setRequestHeader('Content-Type', 'application/json');
-            },
-            success: function() {
-              $('#responseMessage').show();
-              setTimeout(function() {
-                $('#responseMessage').hide();
-              }, 1500);
-
-              $form.find('input, textarea').val('');
-            }
-          });
-        });
-      });
-    </script>
+    <script src="./assets/scripts/slick-slider/slick.min.js"></script>
+    <script src="./assets/scripts/main.js"></script><script>new WOW().init();</script>
+<script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
   </body>
 </html>

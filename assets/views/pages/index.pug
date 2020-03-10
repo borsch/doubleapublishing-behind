@@ -7,7 +7,7 @@ block content
     .hero__bg.hero__bg_3
     .container.hero__content
       .hero__desc
-        +icon('logo', 'logo-icon')
+        +image('behind-logo.png', 'Behind', 'logo-icon')
         h1.site-title ЗАЗИРНИ ЗА ЛАШТУНКИ
         h2.site-subtitle За допомогою телефону ти можеш побачити більше, ніж просто картинку. Дізнайся, що за нею приховано
       .main__img(data-wow-offset="40").wow.slideInUp
@@ -24,19 +24,31 @@ block content
         +sectionHeader('Про Behind', 'Як же це працює')
         .section__inner-block
           .left-block(data-wow-offset="40").wow.slideInLeft
-            video(src="https://www.dropbox.com/s/sja8t5ddn207p7b/MANUAL%20QR%20book.mp4?dl=1" controls)
+            ul.screen-slider
+              li.screen__item
+                +image('/screens/slide1.png', 'Наведи телефон на картинку', 'screen')
+              li.screen__item
+                +image('/screens/slide2.png', 'Намагайся вмістити картинку в рамку', 'screen')
+              li.screen__item
+                +image('/screens/slide3.png', 'Повертайте телефон', 'screen')
+              li.screen__item
+                +image('/screens/slide4.png', 'Лінк', 'screen')
+              li.screen__item
+                +image('/screens/slide5.png', 'Зробіть СВОЮ власну картинку живою', 'screen')
+
+            //video(src="https://www.dropbox.com/s/sja8t5ddn207p7b/MANUAL%20QR%20book.mp4?dl=1" controls)
           .right-block
             .features__list
-              +features('picture', 'Завантажте доданок Behind з AppStore або PlayMarket')
+              +features('picture', 'Завантажте доданок Behind з PlayMarket')
               +features('mobile-app', 'Запустіть його та наведіть на зображення позначеного відміткою Behind (лого). Дочекайтесь завантаження прихованого контенту.')
               +features('view', 'Дивіться, слухайте, насолоджуйтесь')
 
       .features__bottom-block(data-wow-offset="40").wow.slideInUp
         .container
           a(href="").app__link
-            +icon('google-play', 'app__icon')
-          a(href="").app__link
-            +icon('app-store', 'app__icon')
+            +image('app-store-btn-sprite.png', 'Google Play', 'app__icon google-play')
+          //a(href="").app__link
+            +image('app-store-btn-sprite.png', 'App Store', 'app__icon app-store')
 
   section#conditions.conditions
     +preload('ДЛЯ ЗАМОВНИКА')
@@ -45,25 +57,20 @@ block content
         +sectionHeader('ДЛЯ ЗАМОВНИКА', 'Що потрібно, щоб ваша картинка ожила')
         .section__inner-block
           .left-block(data-wow-offset="40").wow.slideInLeft
-            p
-              strong Насправді, зовсім небагато:
+            h3 Насправді, зовсім небагато:
             ul
-              li Потрібен файл з картинкою, яка буде оживати. Можна відсканувати, сфотографувати і т.ін.
-              li Ще потрібен лінк на відео, яке буде відтворюватись на картинці.
-              li Наступний крок – обрати пакет, який вас цікавить, та надіслати заповнену заявку.
-              li На вашу адресу буде сформовано та надіслано запит на оплату. 
-              li Протягом доби після сплати ваша картинка оживе.
-              li Але для того, щоб користувачі дізнались, що там ще щось є, ви маєте розмістити мітку Behind на картинці у видимому місці. Мітку можна скачати ТУТ.
+              li Потрібен файл з картинкою, яка буде оживати. Можна відсканувати, сфотографувати і т.п.
+              li Ще потрібен файл з відео, яке буде відтворюватись на картинці. Це може буте відео зняте на телефон або професійна зйомка.
+              li Звяжіться з нами використовуючи форму внизу сторінки. Поштою ви отримаєте подальшу інструкцію по наданню вашої картинки, відео та додаткової необхідної інформації.
+              li Після отримання необхідних даних, здебільшого протягом доби, ваша картинка оживе. 
+              li Але для того, щоб користувачі дізнались, що за картинкою приховане відео, вкрай бажано розмістити мітку Behind на картинці у видимому місці. Мітку можна скачати <a href="/downloads/sticker-behind.jpg" download>ТУТ</a>.
               li Також ви можете замовити у нас наліпки, які можна клеїти на вже віддруковані зображення.
-
-
-          .right-block(data-wow-offset="40").wow.slideInRight
-            p
-              strong На що варто звернути увагу:
+              li Сервіс Behind для приватних осіб з некомерційною інформацією є безкоштовним. Є обмеження щодо контенту та термінів надання послуг. За детальною інформацією звертайтесь використовуючи форму зворотного звязку.
+              li Щодо умов використання сервісу в комерційних цілях, надішліть, будь ласка, запит і ми з вами зв`яжемось.
+            h3 На що варто звернути увагу:
             ul
               li Картинку бажано знімати в умовах наближених до тих, де її будуть переглядати користувачі.
               li Не варто завантажувати довгі відео. Рекомендовано до 1 хв. Довше навряд будуть дивитись. Тому воно має буте коротке, але цікаве.
-              li Зйомку картинки та відео бажано робити портретно, але це необов’язково.
               li Є можливість приєднувати інший контент та додаткову інформацію. Якщо вас це цікавіть – зв’яжіться з нами. 
               li Також ми можемо допомогти вам зі створенням професійного відео та іншого контенту. 
 
@@ -149,6 +156,7 @@ block content
       h2.section__title Зв'яжіться з нами
       .section__desc Якщо Ви зацікавлені або у Вас виникли питання
       form(action="").feedback__form
+        p * Всі поля обов'язкові до заповнення
         .form__row
           input(type="text" placeholder="Ваше ім'я" required)
           input(type="email" placeholder="Ваш email" required)
@@ -156,7 +164,8 @@ block content
         button(type="submit").button Надіслати
     .copyright
       a(href="/") DoubleAPublishing
-      span &nbsp;&copy; 2019
+      span &nbsp;&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script>
 
 block scripts
   <script>new WOW().init();</script>
+  <script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>

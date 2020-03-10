@@ -3337,7 +3337,7 @@ Copyright (c) 2013 Daniel Eden
     opacity: 1; }
 
 .logo-icon {
-  height: 10.9375rem;
+  height: auto;
   width: 5.875rem;
   fill: #394151; }
 
@@ -3479,8 +3479,7 @@ Copyright (c) 2013 Daniel Eden
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0.9375rem;
-  background: #394151;
-  color: #fff;
+  color: #FF9736;
   padding: 0.9375rem;
   text-align: center;
   border-radius: 0.625rem; }
@@ -3488,11 +3487,25 @@ Copyright (c) 2013 Daniel Eden
     margin-bottom: 0; }
 
 .feature__icon {
-  height: 4.0625rem;
-  width: 4.0625rem;
-  min-width: 4.0625rem;
-  margin-right: 0.9375rem; }
+  height: 5.3125rem;
+  width: 5.3125rem;
+  min-width: 5.3125rem;
+  margin-right: 0.9375rem;
+  border-radius: 50%;
+  padding: 0.625rem;
+  background: #394151;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   .feature__icon img {
+    max-width: 3.4375rem;
+    max-height: 3.4375rem;
     -webkit-filter: drop-shadow(0.25rem 0 0.25rem rgba(0, 0, 0, 0.25));
     filter: drop-shadow(0.25rem 0 0.25rem rgba(0, 0, 0, 0.25)); }
 
@@ -3505,24 +3518,34 @@ Copyright (c) 2013 Daniel Eden
   padding: 1.875rem 0; }
 
 .app__link {
+  display: inline-block;
   margin: 0 1.875rem;
-  text-decoration: none; }
-
-.app__icon {
-  width: 7.187rem;
-  height: 2.125rem;
-  fill: #999;
+  text-decoration: none;
+  width: 9.375rem;
+  height: 3.125rem;
+  overflow: hidden;
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-transition: .3s;
   -o-transition: .3s;
-  transition: .3s; }
-  .app__icon:hover {
-    fill: #394151;
+  transition: .3s;
+  position: relative; }
+  .app__link:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
+
+.app__icon {
+  width: 100%;
+  position: absolute;
+  left: 0; }
+
+.google-play {
+  bottom: 0; }
+
+.screen {
+  width: 100%; }
 
 .conditions .section__wrap {
   background: #ddd7c1; }
@@ -3544,28 +3567,42 @@ Copyright (c) 2013 Daniel Eden
     height: 90%;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 30%;
     background: url("./assets/images/condition_img.png") no-repeat bottom center/contain; }
     @media screen and (max-width: 768px) {
       .conditions .section__wrap:after {
         -webkit-filter: opacity(0.3);
         filter: opacity(0.3); } }
 
-.conditions .left-block, .conditions .right-block {
-  width: 30%;
-  margin-bottom: 3.75rem; }
+.conditions .section__inner-block {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.conditions .left-block {
+  width: 70%;
+  margin-bottom: 3.75rem;
+  -webkit-column-count: 2;
+  column-count: 2; }
+  @media screen and (max-width: 992px) {
+    .conditions .left-block {
+      -webkit-column-count: 1;
+      column-count: 1; } }
   @media screen and (max-width: 768px) {
-    .conditions .left-block, .conditions .right-block {
+    .conditions .left-block {
       width: 100%; } }
 
-.conditions .right-block {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  margin-top: 3.75rem;
-  margin-bottom: 0; }
-  @media screen and (max-width: 768px) {
-    .conditions .right-block {
-      margin-top: 0; } }
+.conditions ul {
+  list-style: disc;
+  margin-left: 1.125rem;
+  margin-right: 10%; }
+  .conditions ul li {
+    margin-bottom: 0.625rem; }
+
+.conditions h3 {
+  font-weight: 500;
+  font-size: 1.3125rem;
+  margin-bottom: 0.9375rem; }
 
 .price .section__wrap {
   background: #fff; }
@@ -3801,7 +3838,7 @@ Copyright (c) 2013 Daniel Eden
 
 .menu-logo {
   width: 1.875rem;
-  height: 2.3125rem;
+  height: auto;
   fill: #394151; }
 
 .nav__item {
