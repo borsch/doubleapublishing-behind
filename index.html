@@ -197,13 +197,14 @@
           <div class="container section__content">
             <h2 class="section__title">Зв'яжіться з нами</h2>
             <div class="section__desc">Якщо Ви зацікавлені або у Вас виникли питання</div>
-            <form class="feedback__form" action="">
+            <div class="section__desc" id="responseMessage" style="display: none;">Ваше повідомлення прийнято</div>
+            <form class="feedback__form" id="feedbackForm">
               <p>* Всі поля обов'язкові до заповнення</p>
               <div class="form__row">
-                <input type="text" placeholder="Ваше ім'я" required>
-                <input type="email" placeholder="Ваш email" required>
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
               </div>
-              <textarea placeholder="Ваше повідомлення" required></textarea>
+              <textarea placeholder="Ваше повідомлення" name="text" required></textarea>
               <button class="button" type="submit">Надіслати</button>
             </form>
           </div>
@@ -240,7 +241,8 @@
     <script src="./assets/scripts/preload.js"></script>
     <script src="./assets/scripts/wow.min.js"></script>
     <script src="./assets/scripts/slick-slider/slick.min.js"></script>
+    <script src="./assets/scripts/feedback-v1.js"></script>
     <script src="./assets/scripts/main.js"></script><script>new WOW().init();</script>
-<script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
+    <script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
   </body>
 </html>

@@ -155,12 +155,13 @@ block content
     .container.section__content
       h2.section__title Зв'яжіться з нами
       .section__desc Якщо Ви зацікавлені або у Вас виникли питання
-      form(action="").feedback__form
+      .section__desc(style={display: 'none'})#responseMessage Ваше повідомлення прийнято
+      form#feedbackForm.feedback__form
         p * Всі поля обов'язкові до заповнення
         .form__row
-          input(type="text" placeholder="Ваше ім'я" required)
-          input(type="email" placeholder="Ваш email" required)
-        textarea(placeholder="Ваше повідомлення" required)
+          input(type="text" placeholder="Ваше ім'я" name="name" required)
+          input(type="email" placeholder="Ваш email" name="email" required)
+        textarea(placeholder="Ваше повідомлення" name="text" required)
         button(type="submit").button Надіслати
     .copyright
       a(href="/") DoubleAPublishing
