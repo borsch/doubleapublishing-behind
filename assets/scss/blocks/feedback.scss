@@ -45,16 +45,24 @@
     }
 }
 
-.copyright {
+.bottom-menu {
+    margin-bottom: rem(10px);
+}
+.footer {
     position: absolute;
+    text-align: center;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: 1.25rem 0;
     background: $black;
     font-size: 0.875rem;
+    color: $gray;
 
     a {
-        color: $white;
+        color: $gray;
+        &:hover {
+            color: $white;
+        }
     }
 }

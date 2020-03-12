@@ -627,6 +627,21 @@ textarea {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s; }
 
+.page {
+  padding-bottom: 7.5rem;
+  padding-top: 1.875rem; }
+  .page h1, .page h2, .page h3, .page h4, .page h5, .page h6 {
+    margin-bottom: .8em;
+    font-weight: 500; }
+  .page ul {
+    margin-bottom: 1.25rem;
+    list-style: disc;
+    padding-left: 1.125rem; }
+
+.page-title {
+  margin-top: 0.9375rem;
+  color: #FF9736; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -3793,16 +3808,23 @@ Copyright (c) 2013 Daniel Eden
     .feedback__form .form__row input {
       width: 49%; }
 
-.copyright {
+.bottom-menu {
+  margin-bottom: 0.625rem; }
+
+.footer {
   position: absolute;
+  text-align: center;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 1.25rem 0;
   background: #1B2126;
-  font-size: 0.875rem; }
-  .copyright a {
-    color: #fff; }
+  font-size: 0.875rem;
+  color: #C9CDD3; }
+  .footer a {
+    color: #C9CDD3; }
+    .footer a:hover {
+      color: #fff; }
 
 .fixed-menu {
   position: fixed;

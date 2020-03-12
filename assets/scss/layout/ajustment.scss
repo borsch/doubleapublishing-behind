@@ -103,3 +103,23 @@ background-size:80px;
         animation-delay: 1.5s;
     }
 }
+
+.page {
+    padding-bottom: rem(120px);
+    padding-top: rem(30px);
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .8em;
+        font-weight: 500;
+    }
+
+    ul {
+        margin-bottom: rem(20px);
+        list-style: disc;
+        padding-left: rem(18px);
+    }
+}
+.page-title {
+    margin-top: rem(15px);
+    color: $primary-color;
+}

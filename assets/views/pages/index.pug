@@ -155,7 +155,7 @@ block content
     .container.section__content
       h2.section__title Зв'яжіться з нами
       .section__desc Якщо Ви зацікавлені або у Вас виникли питання
-      .section__desc(style={display: 'none'})#responseMessage Ваше повідомлення прийнято
+      .section__desc#responseMessage(style="display: none;") Ваше повідомлення прийнято
       form#feedbackForm.feedback__form
         p * Всі поля обов'язкові до заповнення
         .form__row
@@ -163,10 +163,29 @@ block content
           input(type="email" placeholder="Ваш email" name="email" required)
         textarea(placeholder="Ваше повідомлення" name="text" required)
         button(type="submit").button Надіслати
-    .copyright
-      a(href="/") DoubleAPublishing
-      span &nbsp;&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script>
 
+  .fixed-menu
+    a(href="#hero").logo__link
+      +image('behind-logo.png', 'Home', 'menu-logo')
+    nav.page-nav
+      .nav__item.active
+        a(href="#features")
+          .nav__prompt Про Behind
+      .nav__item
+        a(href="#conditions")
+          .nav__prompt Для замовника
+      //.nav__item
+        a(href="#price")
+          .nav__prompt Вартість
+      .nav__item
+        a(href="#feedback")
+          .nav__prompt Зворотній зв'язок
+    //.bottom-nav
+      a(href="#")
+        +icon("arrow-menu", "arrow-menu")
+      .bottom-nav__item Для заказчика
+
+  
 block scripts
   <script>new WOW().init();</script>
   <script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>

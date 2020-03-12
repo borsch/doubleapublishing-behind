@@ -201,35 +201,40 @@
             <form class="feedback__form" id="feedbackForm">
               <p>* Всі поля обов'язкові до заповнення</p>
               <div class="form__row">
-                <input type="text" name="name" placeholder="Ваше ім'я" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
+                <input type="text" placeholder="Ваше ім'я" name="name" required>
+                <input type="email" placeholder="Ваш email" name="email" required>
               </div>
               <textarea placeholder="Ваше повідомлення" name="text" required></textarea>
               <button class="button" type="submit">Надіслати</button>
             </form>
           </div>
-          <div class="copyright"><a href="/">DoubleAPublishing</a><span>&nbsp;&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script></span></div>
         </section>
+        <div class="fixed-menu"><a class="logo__link" href="#hero"><img class="menu-logo" src="./assets/images/behind-logo.png" alt="Home"/></a>
+          <nav class="page-nav">
+            <div class="nav__item active"><a href="#features">
+                <div class="nav__prompt">Про Behind</div></a></div>
+            <div class="nav__item"><a href="#conditions">
+                <div class="nav__prompt">Для замовника</div></a></div>
+            <!--.nav__item
+            a(href="#price")
+              .nav__prompt Вартість
+            -->
+            <div class="nav__item"><a href="#feedback">
+                <div class="nav__prompt">Зворотній зв'язок</div></a></div>
+          </nav>
+          <!--.bottom-nav
+          a(href="#")
+            +icon("arrow-menu", "arrow-menu")
+          .bottom-nav__item Для заказчика
+          
+          
+          -->
+        </div>
+        <footer class="footer">
+          <div class="bottom-menu"><a href="privacy-policy.html">Privacy Policy</a></div>
+          <div class="copyright"><a href="/">DoubleAPublishing</a><span>&nbsp;&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script></span></div>
+        </footer>
       </div>
-    </div>
-    <div class="fixed-menu"><a class="logo__link" href="#hero"><img class="menu-logo" src="./assets/images/behind-logo.png" alt="Home"/></a>
-      <nav class="page-nav">
-        <div class="nav__item active"><a href="#features">
-            <div class="nav__prompt">Про Behind</div></a></div>
-        <div class="nav__item"><a href="#conditions">
-            <div class="nav__prompt">Для замовника</div></a></div>
-        <!--.nav__item
-        a(href="#price")
-          .nav__prompt Вартість
-        -->
-        <div class="nav__item"><a href="#feedback">
-            <div class="nav__prompt">Зворотній зв'язок</div></a></div>
-      </nav>
-      <!--.bottom-nav
-      a(href="#")
-        +icon("arrow-menu", "arrow-menu")
-      .bottom-nav__item Для заказчика
-      -->
     </div>
     <!-- Preloader-->
     <div id="hellopreloader">
@@ -241,8 +246,8 @@
     <script src="./assets/scripts/preload.js"></script>
     <script src="./assets/scripts/wow.min.js"></script>
     <script src="./assets/scripts/slick-slider/slick.min.js"></script>
-    <script src="./assets/scripts/feedback-v1.js"></script>
-    <script src="./assets/scripts/main.js"></script><script>new WOW().init();</script>
-    <script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/feedback-v1.js"></script><script>new WOW().init();</script>
+<script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
   </body>
 </html>

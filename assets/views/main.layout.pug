@@ -18,26 +18,8 @@ html(lang="ru")
       .maincontent
         block content
 
-    .fixed-menu
-      a(href="#hero").logo__link
-        +image('behind-logo.png', 'Home', 'menu-logo')
-      nav.page-nav
-        .nav__item.active
-          a(href="#features")
-            .nav__prompt Про Behind
-        .nav__item
-          a(href="#conditions")
-            .nav__prompt Для замовника
-        //.nav__item
-          a(href="#price")
-            .nav__prompt Вартість
-        .nav__item
-          a(href="#feedback")
-            .nav__prompt Зворотній зв'язок
-      //.bottom-nav
-        a(href="#")
-          +icon("arrow-menu", "arrow-menu")
-        .bottom-nav__item Для заказчика
+        include ./common/footer
+
     // Preloader
     #hellopreloader
       #hellopreloader_preload
