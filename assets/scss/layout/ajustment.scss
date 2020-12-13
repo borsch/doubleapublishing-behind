@@ -23,8 +23,25 @@ textarea {
     resize: vertical;
 }
 
+button {
+    padding: 0.75rem 1.875rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: rem(40px);
+    transition: .3s;
+    margin-top: 1.5625rem;
+	margin-bottom: 0.9375rem;
+    display: inline-block;
+	text-decoration: none;
+    cursor: pointer;
+}
 .button {
-    @include button
+    @extend button;
+    @include button;
+}
+.button-2 {
+    @extend button;
+    @include button($secondary-color, $white);
 }
 
 .section-preload {

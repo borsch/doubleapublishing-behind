@@ -204,7 +204,7 @@ svg:not(:root) {
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
-button,
+button, .button, .button-2,
 input,
 optgroup,
 select,
@@ -222,7 +222,7 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button,
+button, .button, .button-2,
 input {
   /* 1 */
   overflow: visible; }
@@ -231,7 +231,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button,
+button, .button, .button-2,
 select {
   /* 1 */
   text-transform: none; }
@@ -241,7 +241,7 @@ select {
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-button,
+button, .button, .button-2,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -251,7 +251,7 @@ html [type="button"],
 /**
  * Remove the inner border and padding in Firefox.
  */
-button::-moz-focus-inner,
+button::-moz-focus-inner, .button::-moz-focus-inner, .button-2::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
@@ -261,7 +261,7 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-button:-moz-focusring,
+button:-moz-focusring, .button:-moz-focusring, .button-2:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
@@ -469,7 +469,7 @@ section {
   min-height: 100vh;
   position: relative; }
 
-button {
+button, .button, .button-2 {
   border: 0;
   cursor: pointer; }
 
@@ -520,10 +520,7 @@ input, textarea {
 textarea {
   resize: vertical; }
 
-.button {
-  background: #FF9736;
-  border: 1px solid #FF9736;
-  color: #fff;
+button, .button, .button-2 {
   padding: 0.75rem 1.875rem;
   font-size: 1.125rem;
   font-weight: 500;
@@ -533,10 +530,25 @@ textarea {
   transition: .3s;
   margin-top: 1.5625rem;
   margin-bottom: 0.9375rem;
+  display: inline-block;
+  text-decoration: none;
   cursor: pointer; }
+
+.button {
+  background: #FF9736;
+  border: 1px solid #FF9736;
+  color: #fff; }
   .button:hover {
     background: transparent;
     color: #FF9736; }
+
+.button-2 {
+  background: #5E97DA;
+  border: 1px solid #5E97DA;
+  color: #fff; }
+  .button-2:hover {
+    background: transparent;
+    color: #5E97DA; }
 
 .section-preload {
   position: absolute;
@@ -3436,6 +3448,11 @@ Copyright (c) 2013 Daniel Eden
     position: relative;
     max-width: 100%; }
 
+.hero__actions > a {
+  margin-right: 0.9375rem; }
+  .hero__actions > a:last-child {
+    margin-right: 0; }
+
 .features .section__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3777,16 +3794,6 @@ Copyright (c) 2013 Daniel Eden
     background: #5E97DA;
     border: 1px solid #5E97DA;
     color: #fff;
-    padding: 0.75rem 1.875rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-    border-radius: 2.5rem;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    margin-top: 1.5625rem;
-    margin-bottom: 0.9375rem;
-    cursor: pointer;
     width: 60%;
     min-width: 18.75rem;
     max-width: 22.5rem; }

@@ -190,3 +190,11 @@
         max-width: 100%;
     }
 }
+.hero__actions {
+    > a {
+        margin-right: rem(15px);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
