@@ -38,6 +38,7 @@
     .left-block {
         width: 70%;
         margin-bottom: 3.75rem;
+        column-count: 2;
 
         @include laptops {
             column-count: 1;
@@ -51,7 +52,6 @@
         list-style: disc;
         margin-left: rem(18px);
         margin-right: 10%;
-        column-count: 2;
 
         li {
             margin-bottom: rem(10px);

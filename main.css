@@ -3615,7 +3615,9 @@ Copyright (c) 2013 Daniel Eden
 
 .conditions .left-block {
   width: 70%;
-  margin-bottom: 3.75rem; }
+  margin-bottom: 3.75rem;
+  -webkit-column-count: 2;
+  column-count: 2; }
   @media screen and (max-width: 992px) {
     .conditions .left-block {
       -webkit-column-count: 1;
@@ -3627,9 +3629,7 @@ Copyright (c) 2013 Daniel Eden
 .conditions ul {
   list-style: disc;
   margin-left: 1.125rem;
-  margin-right: 10%;
-  -webkit-column-count: 2;
-  column-count: 2; }
+  margin-right: 10%; }
   .conditions ul li {
     margin-bottom: 0.625rem; }
 
