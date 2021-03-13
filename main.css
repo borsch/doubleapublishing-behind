@@ -3646,9 +3646,10 @@ Copyright (c) 2013 Daniel Eden
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; } }
 
+.price__slide {
+  padding: 0 0.5%; }
+
 .price__item {
-  width: 30%;
-  min-width: 30%;
   text-align: center;
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
@@ -3660,16 +3661,17 @@ Copyright (c) 2013 Daniel Eden
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  @media screen and (max-width: 992px) {
-    .price__item {
-      width: 49%;
-      margin-bottom: 2rem; } }
-  @media screen and (max-width: 768px) {
-    .price__item {
-      width: 100%;
-      max-width: 28.125rem;
-      margin: 0 auto 2rem; } }
+  display: flex;
+  /*@include laptops {
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+
+    @include tablets {
+        width: 100%;
+        max-width: 28.125rem;
+        margin: 0 auto 2rem;
+    }*/ }
   .price__item .button {
     width: 100%; }
   .price__item--order .tarif__desc {
@@ -3688,7 +3690,7 @@ Copyright (c) 2013 Daniel Eden
 .tarif__desc, .tarif__order-form {
   background: #ECEEF1;
   border-radius: 0.3125rem;
-  padding: 1.875rem 1.875rem 0.9375rem;
+  padding: 1.875rem 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3761,7 +3763,7 @@ Copyright (c) 2013 Daniel Eden
   margin-top: auto; }
 
 .tarif__cost {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #FF9736; }
 

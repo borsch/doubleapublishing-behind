@@ -77,82 +77,75 @@ block content
               li Є можливість приєднувати інший контент та додаткову інформацію. Якщо вас це цікавіть – зв’яжіться з нами. 
               li Також ми можемо допомогти вам зі створенням професійного відео та іншого контенту. 
 
-
-  //section#price.price
-    +preload('Стоимость')
+  section#price.price
+    +preload('ВАРТІСТЬ')
     .section__wrap(data-wow-offset="40").wow.fadeIn
       .container.section__content
-        +sectionHeader('Стоимость', 'Сколько это стоит')
-        .section__inner-block
-          .price__item(data-wow-offset="40").wow.slideInUp
-            .tarif__desc
-              .tarif__title Тариф "Базовый"
-              ul.tarif__list
-                li.tarif__item Lorem ipsum dolor sit amet..
-                li.tarif__item Consectetur adipiscing elit, sed do eiusmod tempor..
-                li.tarif__item Lorem ipsum dolor sit amet, consectetur
-              .tarif__order
-                .tarif__cost 1234 usd
-                .button.order--button Заказать
-            .tarif__order-form
-              .close-btn.order--reset x
-              .tarif__title Заполните форму для заказа
-              form(action="").order__form
-                input(type="text" placeholder="Имя*" required).order__name
-                input(type="email" placeholder="Email*" required).order__email
-                input(type="phone" placeholder="Телефон").order__phone
-                input(type="text" placeholder="Ссылка на изображение").order__file
-                input(type="text" placeholder="Ссылка на видео").order__link
+        +sectionHeader('Вартість', 'Скільки це коштує')
+        .section__inner-block.price-slider
+          .price__slide
+            .price__item(data-wow-offset="40").wow.slideInUp
+              .tarif__desc
+                .tarif__title Тариф "Free"
+                p Ви можете тримати активними до 3-х картинок протягом місяця, змінюючи відео, посилання та телефони під ними без обмежень
+                +image('/free-tarif.png', '', 'tarif__image')
                 .tarif__order
-                  button.button Отправить заказ
-                  a(href="").order--reset Отменить
-          .price__item(data-wow-offset="40").wow.slideInUp
-            .tarif__desc
-              .tarif__title Тариф "Оптимальный"
-              ul.tarif__list
-                li.tarif__item Lorem ipsum dolor sit amet..
-                li.tarif__item Consectetur adipiscing elit, sed do eiusmod tempor..
-                li.tarif__item Lorem ipsum dolor sit amet, consectetur
-                li.tarif__item Adipiscing elit, sed do eiusmod tempor..
-              .tarif__order
-                .tarif__cost 1234 usd
-                .button.order--button Заказать
-            .tarif__order-form
-              .close-btn.order--reset x
-              .tarif__title Заполните форму для заказа
-              form(action="").order__form
-                input(type="text" placeholder="Имя*" required).order__name
-                input(type="email" placeholder="Email*" required).order__email
-                input(type="phone" placeholder="Телефон").order__phone
-                input(type="text" placeholder="Ссылка на изображение").order__file
-                input(type="text" placeholder="Ссылка на видео").order__link
+                  .tarif__cost Безкоштовно
+                  //.button.order--button Заказать
+              .tarif__order-form
+                .close-btn.order--reset x
+                .tarif__title Заполните форму для заказа
+                form(action="").order__form
+                  input(type="text" placeholder="Имя*" required).order__name
+                  input(type="email" placeholder="Email*" required).order__email
+                  input(type="phone" placeholder="Телефон").order__phone
+                  input(type="text" placeholder="Ссылка на изображение").order__file
+                  input(type="text" placeholder="Ссылка на видео").order__link
+                  .tarif__order
+                    button.button Отправить заказ
+                    a(href="").order--reset Отменить
+          .price__slide
+            .price__item(data-wow-offset="40").wow.slideInUp
+              .tarif__desc
+                .tarif__title Тариф "Basic"
+                p Ви можете тримати активними від 4-х до 15-ти картинок протягом місяця, змінюючи відео, посилання та телефони під ними без обмежень
+                +image('/basic-tarif.png', '', 'tarif__image')
                 .tarif__order
-                  button.button Отправить заказ
-                  a(href="").order--reset Отменить
-          .price__item(data-wow-offset="40").wow.slideInUp
-            .tarif__desc
-              .tarif__title Тариф "Базовый"
-              ul.tarif__list
-                li.tarif__item Lorem ipsum dolor sit amet..
-                li.tarif__item Consectetur adipiscing elit, sed do eiusmod tempor..
-                li.tarif__item Lorem ipsum dolor sit amet, consectetur
-                li.tarif__item Adipiscing elit, sed do eiusmod tempor..
-                li.tarif__item Adipiscing elit, sed do eiusmod tempor..
-              .tarif__order
-                .tarif__cost 1234 usd
-                .button.order--button Заказать
-            .tarif__order-form
-              .close-btn.order--reset x
-              .tarif__title Заполните форму для заказа
-              form(action="").order__form
-                input(type="text" placeholder="Имя*" required).order__name
-                input(type="email" placeholder="Email*" required).order__email
-                input(type="phone" placeholder="Телефон").order__phone
-                input(type="text" placeholder="Ссылка на изображение").order__file
-                input(type="text" placeholder="Ссылка на видео").order__link
+                  .tarif__cost $4 / міс.
+                  //.button.order--button Заказать
+              .tarif__order-form
+                .close-btn.order--reset x
+                .tarif__title Заполните форму для заказа
+                form(action="").order__form
+                  input(type="text" placeholder="Имя*" required).order__name
+                  input(type="email" placeholder="Email*" required).order__email
+                  input(type="phone" placeholder="Телефон").order__phone
+                  input(type="text" placeholder="Ссылка на изображение").order__file
+                  input(type="text" placeholder="Ссылка на видео").order__link
+                  .tarif__order
+                    button.button Отправить заказ
+                    a(href="").order--reset Отменить
+          .price__slide
+            .price__item(data-wow-offset="40").wow.slideInUp
+              .tarif__desc
+                .tarif__title Тариф "Advanced"
+                p Більше 15 активних картинок на місяць
+                +image('/advanced-tarif.png', '', 'tarif__image')
                 .tarif__order
-                  button.button Отправить заказ
-                  a(href="").order--reset Отменить
+                  .tarif__cost За домовленістю
+                  //.button.order--button Заказать
+              .tarif__order-form
+                .close-btn.order--reset x
+                .tarif__title Заполните форму для заказа
+                form(action="").order__form
+                  input(type="text" placeholder="Имя*" required).order__name
+                  input(type="email" placeholder="Email*" required).order__email
+                  input(type="phone" placeholder="Телефон").order__phone
+                  input(type="text" placeholder="Ссылка на изображение").order__file
+                  input(type="text" placeholder="Ссылка на видео").order__link
+                  .tarif__order
+                    button.button Отправить заказ
+                    a(href="").order--reset Отменить
 
   section(data-wow-offset="20")#feedback.feedback.wow.fadeIn
     .container.section__content
@@ -178,17 +171,14 @@ block content
         a(href="#conditions")
           .nav__prompt Для замовника
       //.nav__item
+      .nav__item
         a(href="#price")
           .nav__prompt Вартість
       .nav__item
         a(href="#feedback")
           .nav__prompt Зворотній зв'язок
-    //.bottom-nav
-      a(href="#")
-        +icon("arrow-menu", "arrow-menu")
-      .bottom-nav__item Для заказчика
-
   
 block scripts
   <script>new WOW().init();</script>
-  <script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
+  script
+    include ../../scripts/slider.js

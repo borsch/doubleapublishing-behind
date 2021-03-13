@@ -119,83 +119,97 @@ gtag('config', 'G-7RB75LEQSK');
             </div>
           </div>
         </section>
-        <!--section#price.price
-        +preload('Стоимость')
-        .section__wrap(data-wow-offset="40").wow.fadeIn
-          .container.section__content
-            +sectionHeader('Стоимость', 'Сколько это стоит')
-            .section__inner-block
-              .price__item(data-wow-offset="40").wow.slideInUp
-                .tarif__desc
-                  .tarif__title Тариф "Базовый"
-                  ul.tarif__list
-                    li.tarif__item Lorem ipsum dolor sit amet..
-                    li.tarif__item Consectetur adipiscing elit, sed do eiusmod tempor..
-                    li.tarif__item Lorem ipsum dolor sit amet, consectetur
-                  .tarif__order
-                    .tarif__cost 1234 usd
-                    .button.order--button Заказать
-                .tarif__order-form
-                  .close-btn.order--reset x
-                  .tarif__title Заполните форму для заказа
-                  form(action="").order__form
-                    input(type="text" placeholder="Имя*" required).order__name
-                    input(type="email" placeholder="Email*" required).order__email
-                    input(type="phone" placeholder="Телефон").order__phone
-                    input(type="text" placeholder="Ссылка на изображение").order__file
-                    input(type="text" placeholder="Ссылка на видео").order__link
-                    .tarif__order
-                      button.button Отправить заказ
-                      a(href="").order--reset Отменить
-              .price__item(data-wow-offset="40").wow.slideInUp
-                .tarif__desc
-                  .tarif__title Тариф "Оптимальный"
-                  ul.tarif__list
-                    li.tarif__item Lorem ipsum dolor sit amet..
-                    li.tarif__item Consectetur adipiscing elit, sed do eiusmod tempor..
-                    li.tarif__item Lorem ipsum dolor sit amet, consectetur
-                    li.tarif__item Adipiscing elit, sed do eiusmod tempor..
-                  .tarif__order
-                    .tarif__cost 1234 usd
-                    .button.order--button Заказать
-                .tarif__order-form
-                  .close-btn.order--reset x
-                  .tarif__title Заполните форму для заказа
-                  form(action="").order__form
-                    input(type="text" placeholder="Имя*" required).order__name
-                    input(type="email" placeholder="Email*" required).order__email
-                    input(type="phone" placeholder="Телефон").order__phone
-                    input(type="text" placeholder="Ссылка на изображение").order__file
-                    input(type="text" placeholder="Ссылка на видео").order__link
-                    .tarif__order
-                      button.button Отправить заказ
-                      a(href="").order--reset Отменить
-              .price__item(data-wow-offset="40").wow.slideInUp
-                .tarif__desc
-                  .tarif__title Тариф "Базовый"
-                  ul.tarif__list
-                    li.tarif__item Lorem ipsum dolor sit amet..
-                    li.tarif__item Consectetur adipiscing elit, sed do eiusmod tempor..
-                    li.tarif__item Lorem ipsum dolor sit amet, consectetur
-                    li.tarif__item Adipiscing elit, sed do eiusmod tempor..
-                    li.tarif__item Adipiscing elit, sed do eiusmod tempor..
-                  .tarif__order
-                    .tarif__cost 1234 usd
-                    .button.order--button Заказать
-                .tarif__order-form
-                  .close-btn.order--reset x
-                  .tarif__title Заполните форму для заказа
-                  form(action="").order__form
-                    input(type="text" placeholder="Имя*" required).order__name
-                    input(type="email" placeholder="Email*" required).order__email
-                    input(type="phone" placeholder="Телефон").order__phone
-                    input(type="text" placeholder="Ссылка на изображение").order__file
-                    input(type="text" placeholder="Ссылка на видео").order__link
-                    .tarif__order
-                      button.button Отправить заказ
-                      a(href="").order--reset Отменить
-        
-        -->
+        <section class="price" id="price">
+          <div class="section-preload wow fadeIn" data-wow-offset="40">
+            <div class="section-preload__title">ВАРТІСТЬ</div>
+          </div>
+          <div class="section__wrap wow fadeIn" data-wow-offset="40">
+            <div class="container section__content">
+              <div class="section__menu-item">Вартість</div>
+              <h2 class="section__title">Скільки це коштує</h2>
+              <div class="section__inner-block price-slider">
+                <div class="price__slide">
+                  <div class="price__item wow slideInUp" data-wow-offset="40">
+                    <div class="tarif__desc">
+                      <div class="tarif__title">Тариф "Free"</div>
+                      <p>Ви можете тримати активними до 3-х картинок протягом місяця, змінюючи відео, посилання та телефони під ними без обмежень</p><img class="tarif__image" src="./assets/images//free-tarif.png" alt=""/>
+                      <div class="tarif__order">
+                        <div class="tarif__cost">Безкоштовно</div>
+                        <!--.button.order--button Заказать-->
+                      </div>
+                    </div>
+                    <div class="tarif__order-form">
+                      <div class="close-btn order--reset">x</div>
+                      <div class="tarif__title">Заполните форму для заказа</div>
+                      <form class="order__form" action="">
+                        <input class="order__name" type="text" placeholder="Имя*" required>
+                        <input class="order__email" type="email" placeholder="Email*" required>
+                        <input class="order__phone" type="phone" placeholder="Телефон">
+                        <input class="order__file" type="text" placeholder="Ссылка на изображение">
+                        <input class="order__link" type="text" placeholder="Ссылка на видео">
+                        <div class="tarif__order">
+                          <button class="button">Отправить заказ</button><a class="order--reset" href="">Отменить</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="price__slide">
+                  <div class="price__item wow slideInUp" data-wow-offset="40">
+                    <div class="tarif__desc">
+                      <div class="tarif__title">Тариф "Basic"</div>
+                      <p>Ви можете тримати активними від 4-х до 15-ти картинок протягом місяця, змінюючи відео, посилання та телефони під ними без обмежень</p><img class="tarif__image" src="./assets/images//basic-tarif.png" alt=""/>
+                      <div class="tarif__order">
+                        <div class="tarif__cost">$4 / міс.</div>
+                        <!--.button.order--button Заказать-->
+                      </div>
+                    </div>
+                    <div class="tarif__order-form">
+                      <div class="close-btn order--reset">x</div>
+                      <div class="tarif__title">Заполните форму для заказа</div>
+                      <form class="order__form" action="">
+                        <input class="order__name" type="text" placeholder="Имя*" required>
+                        <input class="order__email" type="email" placeholder="Email*" required>
+                        <input class="order__phone" type="phone" placeholder="Телефон">
+                        <input class="order__file" type="text" placeholder="Ссылка на изображение">
+                        <input class="order__link" type="text" placeholder="Ссылка на видео">
+                        <div class="tarif__order">
+                          <button class="button">Отправить заказ</button><a class="order--reset" href="">Отменить</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="price__slide">
+                  <div class="price__item wow slideInUp" data-wow-offset="40">
+                    <div class="tarif__desc">
+                      <div class="tarif__title">Тариф "Advanced"</div>
+                      <p>Більше 15 активних картинок на місяць</p><img class="tarif__image" src="./assets/images//advanced-tarif.png" alt=""/>
+                      <div class="tarif__order">
+                        <div class="tarif__cost">За домовленістю</div>
+                        <!--.button.order--button Заказать-->
+                      </div>
+                    </div>
+                    <div class="tarif__order-form">
+                      <div class="close-btn order--reset">x</div>
+                      <div class="tarif__title">Заполните форму для заказа</div>
+                      <form class="order__form" action="">
+                        <input class="order__name" type="text" placeholder="Имя*" required>
+                        <input class="order__email" type="email" placeholder="Email*" required>
+                        <input class="order__phone" type="phone" placeholder="Телефон">
+                        <input class="order__file" type="text" placeholder="Ссылка на изображение">
+                        <input class="order__link" type="text" placeholder="Ссылка на видео">
+                        <div class="tarif__order">
+                          <button class="button">Отправить заказ</button><a class="order--reset" href="">Отменить</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="feedback wow fadeIn" data-wow-offset="20" id="feedback">
           <div class="container section__content">
             <h2 class="section__title">Зв'яжіться з нами</h2>
@@ -218,20 +232,11 @@ gtag('config', 'G-7RB75LEQSK');
                 <div class="nav__prompt">Про Behind</div></a></div>
             <div class="nav__item"><a href="#conditions">
                 <div class="nav__prompt">Для замовника</div></a></div>
-            <!--.nav__item
-            a(href="#price")
-              .nav__prompt Вартість
-            -->
+            <div class="nav__item"><a href="#price">
+                <div class="nav__prompt">Вартість</div></a></div>
             <div class="nav__item"><a href="#feedback">
                 <div class="nav__prompt">Зворотній зв'язок</div></a></div>
           </nav>
-          <!--.bottom-nav
-          a(href="#")
-            +icon("arrow-menu", "arrow-menu")
-          .bottom-nav__item Для заказчика
-          
-          
-          -->
         </div>
         <footer class="footer">
           <div class="bottom-menu"><a href="privacy-policy.html">Privacy Policy</a></div>
@@ -251,6 +256,41 @@ gtag('config', 'G-7RB75LEQSK');
     <script src="./assets/scripts/slick-slider/slick.min.js"></script>
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/feedback-v1.js"></script><script>new WOW().init();</script>
-<script>$('.screen-slider').slick({autoplay: true,autoplaySpeed: 3000, arrows: false, dots: true});</script>
+    <script>$('.screen-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true
+});
+
+$('.price-slider').slick({
+    autoplay: false,
+    autoplaySpeed: 3000,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: 0,
+    loop: true,
+    responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+             slidesToShow: 2,
+             dots: true,
+             centerMode: false
+            }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            centerMode: true
+          }
+        }
+    ]
+});
+    </script>
   </body>
 </html>

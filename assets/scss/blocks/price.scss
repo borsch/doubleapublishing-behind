@@ -8,9 +8,13 @@
         }
     }
 }
+
+.price__slide {
+    padding: 0 0.5%;
+}
 .price__item {
-    width: 30%;
-    min-width: 30%;
+    //width: 30%;
+    //min-width: 30%;
     text-align: center;
     transform-origin: 50%;
     transition: .1s;
@@ -18,7 +22,7 @@
     overflow: hidden;
     display: flex;
 
-    @include laptops {
+    /*@include laptops {
         width: 49%;
         margin-bottom: 2rem;
     }
@@ -27,7 +31,7 @@
         width: 100%;
         max-width: 28.125rem;
         margin: 0 auto 2rem;
-    }
+    }*/
 
     .button {
         width: 100%;
@@ -50,7 +54,7 @@
 .tarif__desc, .tarif__order-form {
     background: $light-gray;
     border-radius: 0.3125rem;
-    padding: 1.875rem 1.875rem 0.9375rem;
+    padding: 1.875rem 1.875rem;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -115,7 +119,7 @@
     margin-top: auto;
 }
 .tarif__cost {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: $primary-color;
 }
