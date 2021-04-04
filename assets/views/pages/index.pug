@@ -12,7 +12,7 @@ block content
         h2.site-subtitle За допомогою телефону ти можеш побачити більше, ніж просто картинку. Дізнайся, що за нею приховано
         .hero__actions
           a.button-2(href="http://dashboard.behind.com.ua/login" target="_blank") Увійти
-          a.button-2(href="http://dashboard.behind.com.ua/login" target="_blank") Зареєструватися
+          a.button-2(href="http://dashboard.behind.com.ua/registration" target="_blank") Зареєструватися
       .main__img(data-wow-offset="40").wow.slideInUp
         .main__pic
           +image("/bg/main_img-1.png", "", "main-image-1")
@@ -30,51 +30,82 @@ block content
             ul.screen-slider
               li.screen__item
                 +image('/screens/slide1.png', 'Наведи телефон на картинку', 'screen')
+                h3.screen__title Наведи телефон на картинку
+                .screen__desc Зазвичай, живі картинки помічені логотипом Behind
               li.screen__item
                 +image('/screens/slide2.png', 'Намагайся вмістити картинку в рамку', 'screen')
+                h3.screen__title Намагайся вмістити картинку в рамку
+                .screen__desc Потроху рухайте телефоном, щоб спіймати картинку
               li.screen__item
                 +image('/screens/slide3.png', 'Повертайте телефон', 'screen')
+                h3.screen__title Повертай телефон на картинку
+                .screen__desc Обирай між портретною та альбомною орієнтацією для кращого відображення
               li.screen__item
-                +image('/screens/slide4.png', 'Лінк', 'screen')
-              li.screen__item
-                +image('/screens/slide5.png', 'Зробіть СВОЮ власну картинку живою', 'screen')
+                +image('/screens/slide4.png', 'Посилання', 'screen')
+                h3.screen__title Посилання
+                .screen__desc Натискаючи іконку внизу екрану, ви потрапите на сайт, прив`язаний до відео
 
             //video(src="https://www.dropbox.com/s/sja8t5ddn207p7b/MANUAL%20QR%20book.mp4?dl=1" controls)
           .right-block
             .features__list
-              +features('picture', 'Завантажте доданок Behind з PlayMarket')
-              +features('mobile-app', 'Запустіть його та наведіть на зображення позначеного відміткою Behind (лого). Дочекайтесь завантаження прихованого контенту.')
-              +features('view', 'Дивіться, слухайте, насолоджуйтесь')
+              +features('1', 'Завантажте доданок Behind з PlayMarket або App Store')
+              +features('2', 'Запустіть його та наведіть на зображення позначеного відміткою Behind (лого). Дочекайтесь завантаження прихованого контенту.')
+              +features('3', 'Дивіться, слухайте, насолоджуйтесь')
 
-      .features__bottom-block(data-wow-offset="40").wow.slideInUp
-        .container
-          a(href="https://play.google.com/store/apps/details?id=ua.com.behind").app__link
-            +image('app-store-btn-sprite.png', 'Google Play', 'app__icon google-play')
-          a(href="https://apps.apple.com/ua/app/behind-ar/id1529572202?l=ru").app__link
-            +image('app-store-btn-sprite.png', 'App Store', 'app__icon app-store')
+            .features__bottom-block
+              a(href="https://play.google.com/store/apps/details?id=ua.com.behind").app__link
+                +image('app-store-btn-sprite.png', 'Google Play', 'app__icon google-play')
+              a(href="https://apps.apple.com/ua/app/behind-ar/id1529572202?l=ru").app__link
+                +image('app-store-btn-sprite.png', 'App Store', 'app__icon app-store')
 
   section#conditions.conditions
     +preload('ДЛЯ ЗАМОВНИКА')
     .section__wrap(data-wow-offset="40").wow.fadeIn
       .container.section__content
         +sectionHeader('ДЛЯ ЗАМОВНИКА', 'Що потрібно, щоб ваша картинка ожила')
+        p(data-wow-offset="40").wow.slideInLeft Тепер ви можете оживити вашу картинку самостійно. Це можна зробити або з комп’ютера, або прямо з телефона.
         .section__inner-block
           .left-block(data-wow-offset="40").wow.slideInLeft
-            h3 Насправді, зовсім небагато:
-            ul
-              li Потрібен файл з картинкою, яка буде оживати. Можна відсканувати, сфотографувати і т.п.
-              li Ще потрібен файл з відео, яке буде відтворюватись на картинці. Це може буте відео зняте на телефон або професійна зйомка.
-              li Звяжіться з нами використовуючи форму внизу сторінки. Поштою ви отримаєте подальшу інструкцію по наданню вашої картинки, відео та додаткової необхідної інформації.
-              li Після отримання необхідних даних, здебільшого протягом доби, ваша картинка оживе. 
-              li Але для того, щоб користувачі дізнались, що за картинкою приховане відео, вкрай бажано розмістити мітку Behind на картинці у видимому місці. Мітку можна скачати <a href="/downloads/sticker-behind.jpg" download>ТУТ</a>.
-              li Також ви можете замовити у нас наліпки, які можна клеїти на вже віддруковані зображення.
-              li Сервіс Behind для приватних осіб з некомерційною інформацією є безкоштовним. Є обмеження щодо контенту та термінів надання послуг. За детальною інформацією звертайтесь використовуючи форму зворотного звязку.
-              li Щодо умов використання сервісу в комерційних цілях, надішліть, будь ласка, запит і ми з вами зв`яжемось.
-            h3 На що варто звернути увагу:
+            .conditions__desc
+              h4 З КОМП'ЮТЕРА
+              p <a href="http://dashboard.behind.com.ua/registration" target="_blank">Зареєструйтесь</a> на сайті
+              p Зайдіть у свій кабінет і додайте нову картинку.
+              ul
+                li Підвантажте картинку, введіть необхідну назву.
+                li За потреби, додайте лінк та телефон.
+                li Там же додайте відео.
+                li Підтвердіть.
+            .conditions__desc
+              h4 З ТЕЛЕФОНА
+              p Встановіть доданок Behind з <a href="https://play.google.com/store/apps/details?id=ua.com.behind" target="_blank">Play Market</a> або <a href="https://apps.apple.com/ua/app/behind-ar/id1529572202?l=rus" target="_blank">AppStore</a>
+              p Запустіть доданок.
+              p Зайдіть в меню і оберіть «Управління картинками».
+              p Увійдіть в свій кабінет (якщо ви ще не зареєстровані – зареєструйтесь).
+              p Додайте нову картинку
+              ul
+                li Підвантажте картинку, введіть необхідну назву.
+                li За потреби, додайте лінк та телефон.
+                li Там же додайте відео.
+                li Підтвердіть.
+          .right-block(data-wow-offset="40").wow.slideInLeft
+             +image('smartmockups.png', '', 'conditions__pic')   
+        p(data-wow-offset="40").wow.slideInLeft Після обробки ваша картинка із відео потрапляють в систему.
+        p(data-wow-offset="40").wow.slideInLeft Картинка не буде увімкнена автоматично до перегляду, поки ви не станете довіреним користувачем.
+        p(data-wow-offset="40").wow.slideInLeft Спочатку ми її перевіримо, щоб там не було якогось неприємного або забороненого змісту. Якщо все гаразд, картинка вмикається і миттєво потрапляє на всі телефони, на яких встановлений додаток Behind.
+        p(data-wow-offset="40").wow.slideInLeft Все . Додавайте ще і розкажіть друзям, наскільки це просто! І не забудьте всім розказати про вашу живу картинку!
+
+  section#advices.advices
+    +preload('ПОРАДИ')
+    .section__wrap(data-wow-offset="40").wow.fadeIn
+      .container.section__content
+        +sectionHeader('ПОРАДИ', 'На що варто звернути увагу')
+        .section__inner-block
+          .left-block(data-wow-offset="40").wow.slideInLeft
             ul
               li Картинку бажано знімати в умовах наближених до тих, де її будуть переглядати користувачі.
               li Не варто завантажувати довгі відео. Рекомендовано до 1 хв. Довше навряд будуть дивитись. Тому воно має буте коротке, але цікаве.
-              li Є можливість приєднувати інший контент та додаткову інформацію. Якщо вас це цікавіть – зв’яжіться з нами. 
+              li Є можливість приєднувати інший контент та додаткову інформацію. Якщо вас це цікавіть – 
+                a(href="#feedback") зв’яжіться з нами. 
               li Також ми можемо допомогти вам зі створенням професійного відео та іншого контенту. 
 
   section#price.price
@@ -170,7 +201,9 @@ block content
       .nav__item
         a(href="#conditions")
           .nav__prompt Для замовника
-      //.nav__item
+      .nav__item
+        a(href="#advices")
+          .nav__prompt Поради
       .nav__item
         a(href="#price")
           .nav__prompt Вартість

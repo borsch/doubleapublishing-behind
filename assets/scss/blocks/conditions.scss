@@ -1,6 +1,5 @@
 .conditions {
     .section__wrap {
-        background: $beige;
 
         &:before {
             content: '';
@@ -10,7 +9,6 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: url('./assets/images/bg/cloud.png') repeat-x 0 center;
             background-size: cover;
             animation: animatedBackground 60s linear infinite;
         }
@@ -22,7 +20,6 @@
             position: absolute;
             bottom: 0;
             left: 30%;
-            background: url('./assets/images/condition_img.png') no-repeat bottom center;
             background-size: contain;
 
             @include tablets {
@@ -33,18 +30,41 @@
 
     .section__inner-block {
         justify-content: flex-start;
+
+        h4 {
+            margin-bottom: rem(15px);
+        }
+        @include desktops {
+            flex-direction: column;
+        }
     }
 
     .left-block {
-        width: 70%;
-        margin-bottom: 3.75rem;
-        column-count: 2;
-
-        @include laptops {
-            column-count: 1;
-        }
-        @include tablets {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: rem(30px) 0;
+        @include desktops {
             width: 100%;
+            order: 2;
+        }
+        @include laptops {
+            flex-direction: row;
+        }
+        @include phones {
+            flex-direction: column;
+        }
+    }
+    .right-block {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: rem(30px) 0;
+        @include desktops {
+            width: 100%;
+            order: 1;
         }
     }
 
@@ -63,4 +83,12 @@
         font-size: rem(21px);
         margin-bottom: rem(15px);
     }
+}
+.conditions__pic {
+    max-width: 100%;
+    image-rendering: pixelated;
+}
+.conditions__desc {
+    flex: 1;
+    padding-right: rem(15px);
 }
