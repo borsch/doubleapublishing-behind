@@ -203,7 +203,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba($white, .9);
     padding: rem(10px) 0;
     .container {
         display: flex;
@@ -219,5 +218,8 @@
                 padding: 10px 20px;
             }
         }
+    }
+    &.fixed--nav {
+        background-color: rgba($white, .9);
     }
 }

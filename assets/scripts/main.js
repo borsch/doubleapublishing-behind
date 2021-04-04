@@ -30,9 +30,9 @@ $(window).scroll(function(){
     $('.fixed-menu').css('opacity', '0');
   }
   if ($(this).scrollTop() > 0){
-    $('.hero__actions').css('background-color', '');
+    $('.hero__actions').addClass('fixed--nav');
   } else {
-    $('.hero__actions').css('background-color', 'transparent');
+    $('.hero__actions').removeClass('fixed--nav');
   }
 
   sections.each(function(){

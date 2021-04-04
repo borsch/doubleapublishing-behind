@@ -3469,7 +3469,6 @@ Copyright (c) 2013 Daniel Eden
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 0.625rem 0; }
   .hero__actions .container {
     display: -webkit-box;
@@ -3487,6 +3486,8 @@ Copyright (c) 2013 Daniel Eden
         .hero__actions .container > a {
           font-size: 14px;
           padding: 10px 20px; } }
+  .hero__actions.fixed--nav {
+    background-color: rgba(255, 255, 255, 0.9); }
 
 .features .section__wrap {
   display: -webkit-box;
