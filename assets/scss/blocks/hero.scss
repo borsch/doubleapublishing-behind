@@ -156,7 +156,7 @@
 
 .main__img {
     position: absolute;
-    top: 5%;
+    top: 10%;
     right: 0;
     margin-right: 1.875rem;
     width: 42%;
@@ -198,10 +198,26 @@
     }
 }
 .hero__actions {
-    > a {
-        margin-right: rem(15px);
-        &:last-child {
-            margin-right: 0;
+    position: fixed;
+    z-index: 199;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($white, .9);
+    padding: rem(10px) 0;
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        > a {
+            margin: 0;
+            margin-right: rem(15px);
+            &:last-child {
+                margin-right: 0;
+            }
+            @include phones {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
         }
     }
 }

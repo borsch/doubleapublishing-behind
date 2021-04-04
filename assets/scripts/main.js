@@ -29,6 +29,11 @@ $(window).scroll(function(){
   } else {
     $('.fixed-menu').css('opacity', '0');
   }
+  if ($(this).scrollTop() > 0){
+    $('.hero__actions').css('background-color', '');
+  } else {
+    $('.hero__actions').css('background-color', 'transparent');
+  }
 
   sections.each(function(){
     var $topScroll = $(window).scrollTop() + 10;
