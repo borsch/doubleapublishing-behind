@@ -75,6 +75,9 @@ ul {
     @include tablets {
         font-size: 6rem;
     }
+    @include phones {
+        font-size: rem(60px);
+    }
 }
 .section__wrap {
     min-height: 450px;

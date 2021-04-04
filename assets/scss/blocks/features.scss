@@ -3,10 +3,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: lighten($beige, 10%);
-        @include laptops {
-            background-color: $light-gray;
-        }
+        background-color: lighten($secondary-color, 35%);
     }
 
     .section__content {
@@ -17,7 +14,7 @@
             right: -5vw;
             width: 38%;
             height: 100%;
-            background-color: lighten($secondary-color, 30%);
+            //background-color: lighten($secondary-color, 30%);
             @include desktops {
                 width: 48%;
             }
@@ -78,7 +75,6 @@
     display: flex;
     align-items: center;
     margin-bottom: rem(15px);
-    //background: $dark;
     padding: rem(7px) rem(15px);
     text-align: center;
     border-radius: 0.625rem;
