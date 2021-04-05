@@ -3287,6 +3287,7 @@ Copyright (c) 2013 Daniel Eden
 .hero {
   background-color: #C9CDD3;
   position: relative;
+  overflow: hidden;
   padding: 0;
   -webkit-animation: fadeIn 1s linear;
   animation: fadeIn 1s linear;
@@ -3405,6 +3406,9 @@ Copyright (c) 2013 Daniel Eden
   @media screen and (max-width: 768px) {
     .hero__desc {
       width: 100%;
+      text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .hero__desc {
       text-align: center; } }
 
 .site-title {

@@ -1,6 +1,7 @@
 .hero {
     background-color: $gray;
     position: relative;
+    overflow: hidden;
     padding: 0;
     animation: fadeIn 1s linear;
     z-index: 1;
@@ -135,6 +136,9 @@
 
     @include tablets {
         width: 100%;
+        text-align: center;
+    }
+    @include phones {
         text-align: center;
     }
 }
