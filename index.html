@@ -20,10 +20,7 @@ gtag('config', 'G-7RB75LEQSK');
   <body>
     <div class="wrapper">
       <div class="maincontent">
-        <section class="hero" id="hero" data-image="1">
-          <div class="hero__bg hero__bg_1 show"></div>
-          <div class="hero__bg hero__bg_2"></div>
-          <div class="hero__bg hero__bg_3"></div>
+        <section class="hero" id="hero">
           <div class="hero__actions">
             <div class="container"><a class="button-2" href="http://dashboard.behind.com.ua/login" target="_blank">Увійти</a><a class="button-2" href="http://dashboard.behind.com.ua/registration" target="_blank">Зареєструватися</a></div>
           </div>
@@ -32,9 +29,28 @@ gtag('config', 'G-7RB75LEQSK');
               <h1 class="site-title">ЗАЗИРНИ ЗА ЛАШТУНКИ</h1>
               <h2 class="site-subtitle">За допомогою телефону ти можеш побачити більше, ніж просто картинку. Дізнайся, що за нею приховано</h2>
             </div>
-            <div class="main__img wow slideInUp" data-wow-offset="40">
-              <div class="main__pic"><img class="main-image-1" src="./assets/images//bg/main_img-1.png" alt=""/><img class="main-image-2" src="./assets/images//bg/main_img-2.png" alt=""/><img class="main-image-3" src="./assets/images//bg/main_img-3.png" alt=""/>
-              </div><img src="./assets/images/phone.png" alt=""/>
+          </div>
+          <div class="container hero-video">
+            <div class="video__column wow slideInUp" style="animation-delay:.2s;"><img class="video-frame" src="./assets/images//samsung-frame.png" alt=""/>
+              <div class="video__content">
+                <video class="video" id="video-1" playsinline loop controls autoplay muted>
+                  <source src="/assets/video/Behind_1_ukr.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="video__column wow slideInUp" style="animation-delay: .6s"><img class="video-frame" src="./assets/images//samsung-frame.png" alt=""/>
+              <div class="video__content">
+                <video class="video" id="video-2" playsinline loop controls autoplay muted>
+                  <source src="/assets/video/Behind_2_ukr.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="video__column wow slideInUp" style="animation-delay:1s;"><img class="video-frame" src="./assets/images//samsung-frame.png" alt=""/>
+              <div class="video__content">
+                <video class="video" id="video-3" playsinline loop controls autoplay muted>
+                  <source src="/assets/video/Behind_3_ukr.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
         </section>
@@ -290,9 +306,10 @@ gtag('config', 'G-7RB75LEQSK');
       </div>
     </div>
     <!-- Preloader-->
-    <div id="hellopreloader">
-      <div id="hellopreloader_preload"></div>
-    </div>
+    <!--#hellopreloader
+    #hellopreloader_preload
+    
+    -->
     <script src="./assets/scripts/jquery-3.3.1.min.js"></script>
     <script src="./assets/scripts/jquery.touchSwipe.min.js"></script>
     <script src="./assets/scripts/mobile-detect.min.js"></script>
@@ -335,6 +352,28 @@ $('.price-slider').slick({
           }
         }
     ]
+});
+
+$('.hero-video').slick({
+  autoplay: false,
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: 0,
+  loop: true,
+  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          autoplay: true,
+          autoplaySpeed: 15000,
+          arrows: true
+        }
+      }
+  ]
 });
     </script>
   </body>

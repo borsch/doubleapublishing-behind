@@ -1,10 +1,7 @@
 extends ../main.layout.pug
 
 block content
-  section#hero.hero(data-image="1")
-    .hero__bg.hero__bg_1.show
-    .hero__bg.hero__bg_2
-    .hero__bg.hero__bg_3
+  section#hero.hero
     .hero__actions
       .container
         a.button-2(href="http://dashboard.behind.com.ua/login" target="_blank") Увійти
@@ -14,12 +11,22 @@ block content
         +image('behind-logo.png', 'Behind', 'logo-icon')
         h1.site-title ЗАЗИРНИ ЗА ЛАШТУНКИ
         h2.site-subtitle За допомогою телефону ти можеш побачити більше, ніж просто картинку. Дізнайся, що за нею приховано
-      .main__img(data-wow-offset="40").wow.slideInUp
-        .main__pic
-          +image("/bg/main_img-1.png", "", "main-image-1")
-          +image("/bg/main_img-2.png", "", "main-image-2")
-          +image("/bg/main_img-3.png", "", "main-image-3")
-        +image('phone.png', "", "")
+    .container.hero-video
+      .video__column(style="animation-delay:.2s;").wow.slideInUp
+        +image("/samsung-frame.png", "", "video-frame")
+        .video__content
+          video#video-1.video(playsinline loop controls autoplay muted)
+            source(src="/assets/video/Behind_1_ukr.mp4" type="video/mp4")
+      .video__column(style="animation-delay: .6s").wow.slideInUp
+        +image("/samsung-frame.png", "", "video-frame")
+        .video__content
+          video#video-2.video(playsinline loop controls autoplay muted)
+            source(src="/assets/video/Behind_2_ukr.mp4" type="video/mp4")
+      .video__column(style="animation-delay:1s;").wow.slideInUp
+        +image("/samsung-frame.png", "", "video-frame")
+        .video__content
+          video#video-3.video(playsinline loop controls autoplay muted)
+            source(src="/assets/video/Behind_3_ukr.mp4" type="video/mp4")
 
   section#features.features
     +preload('Про Behind')

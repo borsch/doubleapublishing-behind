@@ -1,85 +1,24 @@
 .hero {
-    background-color: $gray;
+    background: url('./assets/images/bg/hero_bg.jpg') no-repeat center lighten($secondary-color, 25%);
+    background-size: cover;
     position: relative;
     overflow: hidden;
     padding: 0;
     animation: fadeIn 1s linear;
     z-index: 1;
     
-    &[data-image="1"] {
-        .main__pic {
-            background: url('./assets/images/bg/main_bg-1.jpg') no-repeat left center;
-            background-size: cover;
-            animation: animatedForeground 60s linear infinite;
-            .main-image-2, .main-image-3 {
-                display: none;
-            }
-
-            .main-image-1 {
-                top:0;
-                margin-top: -30%;
-                animation: animatedImage3 10s linear infinite;
-            }
-        }
-    }
-
-    &[data-image="2"] {
-        .hero__content, .site-title, .site-subtitle {
-            color: #fff;
-        }
-        .main__pic {
-            background: url('./assets/images/bg/main_bg-2.jpg') no-repeat center bottom;
-            background-size: 100% auto;
-            top:5%;
-
-            .main-image-1, .main-image-3 {
-                display: none;
-            }
-            .main-image-2 {
-                transform-origin: 50%;
-                position: absolute;
-                bottom: 7%;
-                animation: animatedImage2 60s linear infinite;
-            }
-        }
-        .logo-icon {
-            fill: $white;
-        }
-    }
-    &[data-image="3"] {
-        .hero__content, .site-subtitle {
-            color: #fff;
-        }
-        .site-title {
-            color: lighten($secondary-color, 10%);
-        }
-        .main__pic {
-            background: url('./assets/images/bg/main_bg-3.jpg') no-repeat left center;
-            background-size: auto 100%;
-            animation: animatedForeground 60s linear infinite;
-
-            .main-image-1, .main-image-2 {
-                display: none;
-            }
-            .main-image-3 {
-                opacity: 1;
-                animation: animatedImage3 10s linear infinite;
-            }
-            &:after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                background: url("./assets/images/bg/cloud.png") no-repeat center bottom;
-                background-size: cover;
-                animation: animatedBackground 30s linear infinite;
-            }
-        }
-        .logo-icon {
-            fill: $white;
-        }
-    }
+    /*&:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('./assets/images/bg/cloud.png') repeat-x 0 center fixed;
+        background-size: cover;
+        animation: animatedBackground 60s linear infinite;
+    }*/
 }
 
 .hero__bg {
@@ -111,7 +50,7 @@
 
 .logo-icon {
     height: auto;
-    width: 5.875rem;
+    width: rem(60px);
     fill: $dark;
 }
 
@@ -123,20 +62,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    min-height: 100vh;
-    padding-bottom: 25vh;
     padding-left: 0;
 }
 
 .hero__desc {
     position: relative;
     z-index: 2;
-    width: 50%;
+    width: 100%;
+    padding-top: rem(75px);
+    padding-bottom: rem(30px);
+    text-align: center;
 
     @include tablets {
         width: 100%;
         text-align: center;
+        padding-top: rem(100px);
     }
     @include phones {
         text-align: center;
@@ -144,10 +84,10 @@
 }
 
 .site-title {
-    @include font(4.5rem, 'Raleway', $primary-color);
+    @include font(3.75rem, 'Raleway', $primary-color);
     line-height: 1.2;
     text-transform: uppercase;
-    margin-bottom: 1.875rem;
+    margin-bottom: rem(15px);
     font-weight: 500;
     @include phones {
         font-size: rem(40px);

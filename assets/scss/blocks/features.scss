@@ -30,7 +30,7 @@
         }
     }
     .left-block {
-        width: 70%;
+        width: 50%;
         padding-right: 3.75rem;
         position: relative;
 
@@ -39,7 +39,7 @@
         }
 
         @include desktops {
-            width: 60%;
+            width: 50%;
         }
         @include laptops {
             width: 100%;
@@ -48,13 +48,13 @@
         }
     }
     .right-block {
-        width: 30%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         @include desktops {
-            width: 40%;
+            width: 50%;
         }
         @include laptops {
             width: 100%;

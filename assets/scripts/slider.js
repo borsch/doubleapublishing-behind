@@ -33,3 +33,25 @@ $('.price-slider').slick({
         }
     ]
 });
+
+$('.hero-video').slick({
+  autoplay: false,
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: 0,
+  loop: true,
+  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          autoplay: true,
+          autoplaySpeed: 15000,
+          arrows: true
+        }
+      }
+  ]
+});
